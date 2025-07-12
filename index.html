@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <link rel="shourtcut icon" type="x-icon" href="./imgs/pizza icon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mariam Kilany" />
+    <meta
+      name="description"
+      content="Order your custom pizza from Black Goose Bistro. Choose crust and toppings with your own delivery instructions."
+    />
+    <meta
+      name="keywords"
+      content="pizza, crust , order form, restaurant, custom pizza, Black Goose Bistro"
+    />
+
+    <title>Pizza Custom Form</title>
+   
+    <!-- * font Awesome styleSheet -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+
+    <!-- * google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Nothing+You+Could+Do&display=swap"
+      rel="stylesheet"
+    />
+
+     <!-- * Main styleSheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <!-- & ---------- nav bar -------->
+
+    <nav>
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <h1>Logo</h1>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="#home" aria-label="Go to Home Section"
+                  ><span>Main</span></a
+                >
+              </li>
+              <li>
+                <a href="#order" aria-label="Go to Order Section"
+                  ><span>Make an Order</span></a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="Go to Contact Section"
+                  ><span>Contact Us</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <ul>
+              <li>
+                <a href="#" aria-label="User Profile">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Shopping Cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+     
+     <!-- & ---------- header section -------->
+
+    <header id="home">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-txt">
+            <span>Delicious</span>
+            <h2>Black Goose <br />Bistro</h2>
+            <p>
+              Our 12 wood-fired pizza are available for delivery, build your
+              custom pizza and we'll deliver it within an hour
+            </p>
+            <button type="button">Order</button>
+          </div>
+          <div class="header-img">
+            <picture class="back-img">
+              <img src="./imgs/h4-start-piz.png" alt="" />
+            </picture>
+            <picture class="front-img">
+              <img src="./imgs/h4-pizza-3.png" alt="" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </header>
+
+     <!-- & ---------- Customize order form -------->
+
+    <form >
+      <div class="order" id="order" aria-labelledby="custom-pizza-title">
+        <div class="container">
+          <div class="title">
+            <h2 id="custom-pizza-title">Design Your Dream Pizza</h2>
+            <p class="section-description">
+              Select one pizza base from the options below to start your custom
+              creation.
+            </p>
+          </div>
+
+           <!-- & ---------- crust section -------->
+
+          <div class="card">
+            <div class="card-img">
+              <picture
+                ><img src="./imgs/pizza1.png" alt="Classic White Pizza"
+              /></picture>
+            </div>
+            <div class="card-txt">
+              <h3>Classic White</h3>
+              <p>
+                A rich and creamy twist on tradition our
+                <b>Classic White Pizza</b> features a garlic-infused olive oil
+                base topped with a blend of melted mozzarella, ricotta, and
+                parmesan cheeses. Finished with a touch of Italian herbs, this
+                pizza skips the tomato sauce in favor of bold, cheesy flavor and
+                a perfectly crispy crust.
+              </p>
+
+              <input
+                type="radio"
+                name="pizza"
+                id="pizza1"
+                hidden
+                aria-label="Classic White Pizza"
+              />
+              <label for="pizza1" class="choose-btn">Choose</label>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-txt">
+              <h3>Multigrain Pizza</h3>
+              <p>
+                A wholesome take on a classic, our
+                <b>Multigrain Pizza</b> features a hearty crust made from a
+                blend of whole grains like oats, flaxseed, and wheat. Topped
+                with mozzarella, crisp vegetables, and a drizzle of herb-infused
+                olive oil, this pizza offers bold flavor, added nutrition, and a
+                satisfyingly crunchy bite in every slice perfect for those who
+                love both taste and balance.
+              </p>
+
+              <input
+                type="radio"
+                name="pizza"
+                id="pizza2"
+                hidden
+                aria-label="Multigrain Pizza"
+              />
+              <label for="pizza2" class="choose-btn">Choose</label>
+            </div>
+            <div class="card-img">
+              <picture
+                ><img src="./imgs/pizza2.png" alt="Multigrain Pizza"
+              /></picture>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <picture
+                ><img src="./imgs/pizza3.png" alt="Stuffed Crust Pizza"
+              /></picture>
+            </div>
+            <div class="card-txt">
+              <h3>Stuffed Crust</h3>
+              <p>
+                A bold upgrade for cheese lovers, our
+                <b>Stuffed Crust Pizza</b> features a golden crust filled with
+                gooey mozzarella that melts with every bite. Finished with
+                classic toppings, melted cheese, and a sprinkle of Italian
+                herbs, this pizza delivers rich flavor from the inside out and
+                adds a deliciously melty surprise to every slice.
+              </p>
+
+              <input
+                type="radio"
+                name="pizza"
+                id="pizza3"
+                hidden
+                aria-label="Stuffed Crust Pizza"
+              />
+              <label for="pizza3" class="choose-btn">Choose</label>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-txt">
+              <h3>Gluten-Free</h3>
+              <p>
+                Made for those who go wheat-free without sacrificing flavor, our
+                <b> Gluten-Free Pizza</b> features a light, crispy crust crafted
+                from premium gluten-free ingredients. Topped with mozzarella,
+                fresh vegetables, and a garlic-infused olive oil drizzle, it
+                delivers all the cheesy, savory goodness of a traditional slice
+                with none of the gluten.
+              </p>
+
+              <input
+                type="radio"
+                name="pizza"
+                id="pizza4"
+                hidden
+                aria-label="Gluten-Free Pizza"
+              />
+              <label for="pizza4" class="choose-btn">Choose</label>
+            </div>
+            <div class="card-img">
+              <picture
+                ><img src="./imgs/h4-pizza-3.png" alt="Gluten-Free Pizza"
+              /></picture>
+            </div>
+          </div>
+        </div>
+
+         <!-- & ---------- topping section -------->
+
+        <div class="toppings">
+          <div class="container">
+            <p class="section-description">
+              Choose as many toppings as you like — each one adds more flavor to
+              your pizza!
+            </p>
+
+            <div class="cards">
+              <input
+                type="checkbox"
+                id="topping1"
+                hidden
+                aria-label="Pepperoni"
+              />
+              <label for="topping1" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/pepperoni.png" alt="Pepperoni" />
+                </div>
+                <div class="topping-name">
+                  <span>Pepperoni</span>
+                </div>
+              </label>
+
+              <input
+                type="checkbox"
+                id="topping2"
+                hidden
+                aria-label="Mushrooms"
+              />
+              <label for="topping2" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/mushrooms.png" alt="Mushrooms" />
+                </div>
+                <div class="topping-name">
+                  <span>Mushrooms</span>
+                </div>
+              </label>
+
+              <input
+                type="checkbox"
+                id="topping3"
+                hidden
+                aria-label="tomato-sauce"
+              />
+              <label for="topping3" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/tomato-sauce.png" alt="tomato-sauce" />
+                </div>
+                <div class="topping-name">
+                  <span>Red Sauce</span>
+                </div>
+              </label>
+
+              <input type="checkbox" id="topping4" hidden aria-label="cheese" />
+              <label for="topping4" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/cheese.png" alt="cheese" />
+                </div>
+                <div class="topping-name">
+                  <span>Mozzarella Cheese</span>
+                </div>
+              </label>
+              <input type="checkbox" id="topping5" hidden aria-label="onions" />
+              <label for="topping5" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/onions.png" alt="onions" />
+                </div>
+                <div class="topping-name">
+                  <span>Onions</span>
+                </div>
+              </label>
+
+              <input
+                type="checkbox"
+                id="topping6"
+                hidden
+                aria-label="peppers"
+              />
+              <label for="topping6" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/peppers (1).png" alt="peppers" />
+                </div>
+                <div class="topping-name">
+                  <span>Peppers</span>
+                </div>
+              </label>
+
+              <input
+                type="checkbox"
+                id="topping7"
+                hidden
+                aria-label="anchovy"
+              />
+              <label for="topping7" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/anchovy.png" alt="anchovy" />
+                </div>
+                <div class="topping-name">
+                  <span>Anchovy</span>
+                </div>
+              </label>
+
+              <input type="checkbox" id="topping8" hidden aria-label="bacon" />
+              <label for="topping8" class="topping-card">
+                <div class="topping-icon">
+                  <img src="./imgs/bacon-strips_7471954.png" alt="bacon" />
+                </div>
+                <div class="topping-name">
+                  <span>Bacon</span>
+                </div>
+              </label>
+            </div>
+            <div class="add-to-cart">
+              <button type="submit">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+     <!-- & ---------- Customer Information -------->
+
+    <div class="user-info">
+      <div class="container">
+        <div class="title">
+          <h2 id="customer-details-title">Customer Details</h2>
+          <p class="section-description">
+            Fill in your contact and delivery details so we can bring your pizza
+            to your door.
+          </p>
+        </div>
+
+        <form aria-labelledby="customer-details-title">
+          <div class="inputs">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ex.mariam"
+              class="half-input"
+              required
+              autocomplete="off"
+              aria-label="Full Name"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="mariam@example.com"
+              required
+              autocomplete="off"
+              aria-label="Email Address"
+            />
+            <input
+              type="tel"
+              name="number"
+              id="number"
+              placeholder="Your Number"
+              required
+              autocomplete="off"
+              aria-label="Phone Number"
+            />
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Your Address"
+              required
+              aria-label="Delivery Address"
+            />
+          </div>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Delivery Instruction.."
+            rows="4"
+            required
+            aria-label="Delivery Instructions"
+          ></textarea>
+          <button type="submit">Confirm Order</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
