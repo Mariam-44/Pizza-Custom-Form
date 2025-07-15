@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <link rel="shourtcut icon" type="x-icon" href="./imgs/pizza icon.png">
+    <link rel="shourtcut icon" type="x-icon" href="../imgs/pizza icon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Mariam Kilany" />
@@ -14,10 +14,10 @@
       content="pizza, crust , order form, restaurant, custom pizza, Black Goose Bistro"
     />
 
-    <title>Pizza Custom Form</title>
-   
+    <title>Pizza Resturant</title>
+
     <!-- * font Awesome styleSheet -->
-    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="../CSS/all.min.css" />
 
     <!-- * google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,8 +33,13 @@
       rel="stylesheet"
     />
 
-     <!-- * Main styleSheet -->
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- * Main styleSheet -->
+    <link rel="stylesheet" href="../CSS/style.css" />
   </head>
   <body>
     <!-- & ---------- nav bar -------->
@@ -58,6 +63,11 @@
                 >
               </li>
               <li>
+                <a href="#menu" aria-label="Go to menu Section"
+                  ><span>Menu</span></a
+                >
+              </li>
+              <li>
                 <a href="#" aria-label="Go to Contact Section"
                   ><span>Contact Us</span></a
                 >
@@ -66,6 +76,14 @@
           </div>
           <div class="nav-icons">
             <ul>
+              <li>
+                <label for="mode" class="dark">
+                  <i class="fa-solid fa-moon"></i>
+                </label>
+                <label for="mode" class="light">
+                  <i class="fa-regular fa-sun"></i></label
+                ><input type="checkbox" id="mode" class="mode" hidden="" />
+              </li>
               <li>
                 <a href="#" aria-label="User Profile">
                   <i class="fa-solid fa-user"></i>
@@ -86,8 +104,8 @@
         </div>
       </div>
     </nav>
-     
-     <!-- & ---------- header section -------->
+
+    <!-- & ---------- header section -------->
 
     <header id="home">
       <div class="container">
@@ -99,23 +117,24 @@
               Our 12 wood-fired pizza are available for delivery, build your
               custom pizza and we'll deliver it within an hour
             </p>
-            <button type="button">Order</button>
+            <a href="#order" class="btn">Customize Yours</a>
+            <a href="#menu" class="btn">Menu</a>
           </div>
           <div class="header-img">
             <picture class="back-img">
-              <img src="./imgs/h4-start-piz.png" alt="" />
+              <img src="../imgs/h4-start-piz.png" alt="" />
             </picture>
             <picture class="front-img">
-              <img src="./imgs/h4-pizza-3.png" alt="" />
+              <img src="../imgs/h4-pizza-3.png" alt="" />
             </picture>
           </div>
         </div>
       </div>
     </header>
 
-     <!-- & ---------- Customize order form -------->
+    <!-- & ---------- Customize order form -------->
 
-    <form >
+    <form>
       <div class="order" id="order" aria-labelledby="custom-pizza-title">
         <div class="container">
           <div class="title">
@@ -126,12 +145,12 @@
             </p>
           </div>
 
-           <!-- & ---------- crust section -------->
+          <!-- & ---------- crust section -------->
 
           <div class="card">
             <div class="card-img">
               <picture
-                ><img src="./imgs/pizza1.png" alt="Classic White Pizza"
+                ><img src="../imgs/pizza1.png" alt="Classic White Pizza"
               /></picture>
             </div>
             <div class="card-txt">
@@ -180,7 +199,7 @@
             </div>
             <div class="card-img">
               <picture
-                ><img src="./imgs/pizza2.png" alt="Multigrain Pizza"
+                ><img src="../imgs/pizza2.png" alt="Multigrain Pizza"
               /></picture>
             </div>
           </div>
@@ -188,7 +207,7 @@
           <div class="card">
             <div class="card-img">
               <picture
-                ><img src="./imgs/pizza3.png" alt="Stuffed Crust Pizza"
+                ><img src="../imgs/pizza3.png" alt="Stuffed Crust Pizza"
               /></picture>
             </div>
             <div class="card-txt">
@@ -236,13 +255,13 @@
             </div>
             <div class="card-img">
               <picture
-                ><img src="./imgs/h4-pizza-3.png" alt="Gluten-Free Pizza"
+                ><img src="../imgs/h4-pizza-3.png" alt="Gluten-Free Pizza"
               /></picture>
             </div>
           </div>
         </div>
 
-         <!-- & ---------- topping section -------->
+        <!-- & ---------- topping section -------->
 
         <div class="toppings">
           <div class="container">
@@ -260,7 +279,7 @@
               />
               <label for="topping1" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/pepperoni.png" alt="Pepperoni" />
+                  <img src="../imgs/pepperoni.png" alt="Pepperoni" />
                 </div>
                 <div class="topping-name">
                   <span>Pepperoni</span>
@@ -275,7 +294,7 @@
               />
               <label for="topping2" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/mushrooms.png" alt="Mushrooms" />
+                  <img src="../imgs/mushrooms.png" alt="Mushrooms" />
                 </div>
                 <div class="topping-name">
                   <span>Mushrooms</span>
@@ -290,7 +309,7 @@
               />
               <label for="topping3" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/tomato-sauce.png" alt="tomato-sauce" />
+                  <img src="../imgs/tomato-sauce.png" alt="tomato-sauce" />
                 </div>
                 <div class="topping-name">
                   <span>Red Sauce</span>
@@ -300,7 +319,7 @@
               <input type="checkbox" id="topping4" hidden aria-label="cheese" />
               <label for="topping4" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/cheese.png" alt="cheese" />
+                  <img src="../imgs/cheese.png" alt="cheese" />
                 </div>
                 <div class="topping-name">
                   <span>Mozzarella Cheese</span>
@@ -309,7 +328,7 @@
               <input type="checkbox" id="topping5" hidden aria-label="onions" />
               <label for="topping5" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/onions.png" alt="onions" />
+                  <img src="../imgs/onions.png" alt="onions" />
                 </div>
                 <div class="topping-name">
                   <span>Onions</span>
@@ -324,7 +343,7 @@
               />
               <label for="topping6" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/peppers (1).png" alt="peppers" />
+                  <img src="../imgs/peppers (1).png" alt="peppers" />
                 </div>
                 <div class="topping-name">
                   <span>Peppers</span>
@@ -339,7 +358,7 @@
               />
               <label for="topping7" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/anchovy.png" alt="anchovy" />
+                  <img src="../imgs/anchovy.png" alt="anchovy" />
                 </div>
                 <div class="topping-name">
                   <span>Anchovy</span>
@@ -349,83 +368,169 @@
               <input type="checkbox" id="topping8" hidden aria-label="bacon" />
               <label for="topping8" class="topping-card">
                 <div class="topping-icon">
-                  <img src="./imgs/bacon-strips_7471954.png" alt="bacon" />
+                  <img src="../imgs/bacon-strips_7471954.png" alt="bacon" />
                 </div>
                 <div class="topping-name">
                   <span>Bacon</span>
                 </div>
               </label>
             </div>
+
             <div class="add-to-cart">
-              <button type="submit">Add to Cart</button>
+              <a href="../html/confirm.html" class="btn">Bring me pizza!</a>
             </div>
           </div>
         </div>
       </div>
     </form>
 
-     <!-- & ---------- Customer Information -------->
-
-    <div class="user-info">
+    <!-- & ---------- Statistics Display -------->
+    <div class="counters">
       <div class="container">
-        <div class="title">
-          <h2 id="customer-details-title">Customer Details</h2>
-          <p class="section-description">
-            Fill in your contact and delivery details so we can bring your pizza
-            to your door.
-          </p>
-        </div>
-
-        <form aria-labelledby="customer-details-title">
-          <div class="inputs">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Ex.mariam"
-              class="half-input"
-              required
-              autocomplete="off"
-              aria-label="Full Name"
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="mariam@example.com"
-              required
-              autocomplete="off"
-              aria-label="Email Address"
-            />
-            <input
-              type="tel"
-              name="number"
-              id="number"
-              placeholder="Your Number"
-              required
-              autocomplete="off"
-              aria-label="Phone Number"
-            />
-            <input
-              type="text"
-              name="address"
-              id="address"
-              placeholder="Your Address"
-              required
-              aria-label="Delivery Address"
-            />
+        <div class="counts">
+          <div class="count">
+            <i class="fas fa-users fa-2x"></i>
+            <p>+600</p>
+            <span>Happy Customers</span>
           </div>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Delivery Instruction.."
-            rows="4"
-            required
-            aria-label="Delivery Instructions"
-          ></textarea>
-          <button type="submit">Confirm Order</button>
-        </form>
+          <div class="count">
+            <i class="fas fa-pizza-slice fa-2x"></i>
+            <p>+800</p>
+            <span>Pizzas Served</span>
+          </div>
+          <div class="count">
+            <i class="fas fa-truck fa-2x"></i>
+            <p>95%</p>
+            <span>On-Time Deliveries</span>
+          </div>
+          <div class="count">
+            <i class="fas fa-star fa-2x"></i>
+            <p>4.9</p>
+            <span>Customer Rating</span>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- & ---------- Menu-------->
+    <div class="menu" id="menu">
+      <div class="container">
+        <div class="title">
+          <h2 id="custom-pizza-title">Our Menu</h2>
+          <p class="section-description">
+            Select one pizza base from the options below to start your custom
+            creation.
+          </p>
+        </div>
+        <div class="items">
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item1.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$3.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item2.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$16.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item3.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$2.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item4.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$5.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item5.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$7.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item6.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$10.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item7.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$22.60</span>
+          </div>
+          <div class="item">
+            <div class="item-img">
+              <img src="../imgs/item8.gif" alt="" />
+            </div>
+            <p>
+              Classic marinara sauce, authentic old-world pepperoni,
+              all-natural...
+            </p>
+            <span>$12.60</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- & ---------- Footer -------->
+    <div class="footer">
+      <div class="container">
+        <div class="copyright">
+          <div class="icons">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <div class="clear"></div>
+          </div>
+
+          <div class="copyright_content">
+            <p>
+              Copy Right 2025
+              <a href=""><span>Black Goose Bistro</span></a>
+              . All rights reserved. <br />
+              Designed with love for pizza lovers everywhere.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
   </body>
 </html>

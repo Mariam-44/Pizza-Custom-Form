@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <link rel="shourtcut icon" type="x-icon" href="../imgs/pizza icon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+     <!-- * font Awesome styleSheet -->
+    <link rel="stylesheet" href="../CSS/all.min.css" />
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+
+    <div class="confirm-order">
+      <div class="container">
+        <div class="title">
+          <h2>Your Pizza is Ready!</h2>
+
+          <p class="section-description">
+            You're just one step away from deliciousness! Complete the form
+            below to confirm your order.
+          </p>
+        </div>
+
+        <div class="box-container">
+          <div class="box-container-img">
+            <img
+              src="../imgs/h4-pizza-3.png"
+              width="180px"
+              class="animate__animated animate__bounceInDown"
+              alt=""
+            />
+          </div>
+          <div class="pizza-box">
+            <div class="front-box">
+              <img src="../imgs/pizza-box.png" width="200px" alt="" />
+            </div>
+            <div class="base-box">
+              <img src="../imgs/h4-pizza-3.png" alt="Pizza" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- & ---------- Customer Information -------->
+
+    <div class="user-info">
+      <div class="container">
+        <div class="title">
+          <h2 id="customer-details-title">Customer Details</h2>
+          <p class="section-description">
+            Fill in your contact and delivery details so we can bring your pizza
+            to your door.
+          </p>
+        </div>
+
+        <form aria-labelledby="customer-details-title">
+          <div class="inputs">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ex.mariam"
+              class="half-input"
+              autocomplete="off"
+              aria-label="Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="mariam@example.com"
+              autocomplete="off"
+              aria-label="Email Address"
+              required
+            />
+            <input
+              type="tel"
+              name="number"
+              id="number"
+              placeholder="Your Number"
+              autocomplete="off"
+              aria-label="Phone Number"
+              required
+            />
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Your Address"
+              aria-label="Delivery Address"
+              required
+            />
+          </div>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Delivery Instruction.."
+            rows="4"
+            aria-label="Delivery Instructions"
+          ></textarea>
+          <a href="" class="btn">Confirm Order</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

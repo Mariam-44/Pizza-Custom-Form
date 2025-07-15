@@ -1,10 +1,25 @@
+:root {
+  --primary-color: #e74c3c;
+  --primary-hover: #cf3f30;
+  --secondary-color: #d09f45;
+  --bg-light: #f9edde;
+  --bg-section: #fff7ed;
+  --text-gray: #666666;
+  --font-primary: "Gloock";
+  --bg-dark: #121212;
+  --dark-section: #1e1e1e;
+  --dark-text-secondary: #bbbbbb;
+  --transition-fast: 300ms;
+  --transition-med: 700ms;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #f9edde;
+  background-color: var(--bg-light);
 }
 html {
   scroll-behavior: smooth;
@@ -34,7 +49,7 @@ nav {
   box-shadow: 0px 0px 10px 0px #0003;
   z-index: 99;
   left: 0;
-  background-color: #f9edde;
+  background-color: var(--bg-light);
 }
 
 .nav-links span {
@@ -45,9 +60,9 @@ nav {
   content: " ";
   width: 0%;
   bottom: -2px;
-  border-bottom: 3px solid #e74c3c;
+  border-bottom: 3px solid var(--primary-color);
   position: absolute;
-  transition: 700ms;
+  transition: var(--transition-med);
 }
 
 .nav-content {
@@ -68,17 +83,24 @@ nav {
   gap: 20px;
   font-size: 15px;
 }
-
+.dark {
+  margin-right: 4px;
+}
+.nav-icons label {
+  cursor: pointer;
+}
 /*^ -------------- Target links -----------------*/
 
 body:has(#home:target) .nav-links a[href="#home"] span::before,
 body:has(#order:target) .nav-links a[href="#order"] span::before,
-body:has(#contact:target) .nav-links a[href="#"] span::before {
+body:has(#contact:target) .nav-links a[href="#"] span::before,
+body:has(#menu:target) .nav-links a[href="#menu"] span::before{
   width: 100%;
 }
 body:has(#home:target) .nav-links a[href="#home"] span,
 body:has(#order:target) .nav-links a[href="#order"] span,
-body:has(#contact:target) .nav-links a[href="#"] span {
+body:has(#contact:target) .nav-links a[href="#"] span,
+body:has(#menu:target) .nav-links a[href="#menu"] span {
   color: #c93232;
 }
 
@@ -105,13 +127,13 @@ body:has(#contact:target) .nav-links a[href="#"] span {
 .header-txt h2 {
   font-size: 60px;
   margin-top: 10px;
-  font-family: "Gloock";
+  font-family: var(--font-primary);
   letter-spacing: 5px;
 }
 
 .header-txt p {
   font-size: 16px;
-  color: #666666;
+  color: var(--text-gray);
   margin-block: 15px;
   line-height: 1.5;
 }
@@ -129,7 +151,6 @@ body:has(#contact:target) .nav-links a[href="#"] span {
   left: 10%;
 }
 
-button,
 .choose-btn {
   display: inline-block;
   margin-top: 10px;
@@ -137,18 +158,7 @@ button,
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: 300ms;
-}
-
-button:hover {
-  background-color: #cf3f30;
-}
-
-button {
-  background-color: #e74c3c;
-  color: white;
-  box-shadow: 0 0 6px rgba(231, 76, 60, 0.4);
-  border: #e74c3c;
+  transition: var(--transition-fast);
 }
 
 /*^ -------------- Order Form Section -----------------*/
@@ -172,14 +182,14 @@ button {
   color: #2c2c2c;
   position: relative;
   letter-spacing: 5px;
-  font-family: "Gloock";
+  font-family: var(--font-primary);
 }
 
 .title h2::after {
   content: " ";
   width: 20%;
   bottom: -20px;
-  border-bottom: 5px solid #e74c3c;
+  border-bottom: 5px solid var(--primary-color);
   left: 40%;
   position: absolute;
   border-radius: 4px;
@@ -188,7 +198,7 @@ button {
 .section-description {
   text-align: center;
   font-size: 18px;
-  color: #666;
+  color: var(--text-gray);
   max-width: 600px;
   margin: 30px auto 10px;
   line-height: 1.6;
@@ -230,7 +240,7 @@ body:has(#pizza1:checked) label[for="pizza1"],
 body:has(#pizza2:checked) label[for="pizza2"],
 body:has(#pizza3:checked) label[for="pizza3"],
 body:has(#pizza4:checked) label[for="pizza4"] {
-  background-color: #e74c3c;
+  background-color: var(--primary-color);
   color: white;
   box-shadow: 0 0 6px rgba(231, 76, 60, 0.4);
 }
@@ -240,11 +250,15 @@ body:has(#pizza4:checked) label[for="pizza4"] {
 .toppings {
   margin-top: 90px;
 }
-.cards {
+.cards,
+.timeline-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+.timeline-cards {
+  margin-top: 60px;
 }
 
 .topping-card {
@@ -273,7 +287,7 @@ body:has(#topping5:checked) label[for="topping5"],
 body:has(#topping6:checked) label[for="topping6"],
 body:has(#topping7:checked) label[for="topping7"],
 body:has(#topping8:checked) label[for="topping8"] {
-  border-color: #e74c3c;
+  border-color: var(--primary-color);
   box-shadow: 0 0 12px rgba(231, 76, 60, 0.4);
   background-color: #f5d7d0;
 }
@@ -285,7 +299,7 @@ form {
   flex-wrap: wrap;
   align-items: center;
   margin: 30px 0;
-  gap:15px;
+  gap: 15px;
   padding: 20px;
 }
 
@@ -311,24 +325,206 @@ textarea {
 }
 
 textarea {
-  min-height:150px;
+  min-height: 150px;
   max-height: 300px;
   border-radius: 10px;
   width: 100%;
   margin-inline: 8px;
-   resize: vertical;
+  resize: vertical;
 }
 
-form input:focus {
-  outline: none;
-  border: 1px solid #e74c3c;
-}
-
+form input:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #e74c3c;
+  border: 1px solid var(--primary-color);
 }
 
-form button{
+form button {
   margin-left: 9px;
 }
+/* ^ ----------- pizza box --------------- */
+.box-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.pizza-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.front-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top;
+  transition: 800ms;
+  cursor: pointer;
+}
+
+.base-box {
+  height: 100%;
+  background-image: url(../imgs/pizza-box2.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.base-box img {
+  width: 80%;
+}
+.pizza-box:hover .front-box {
+  transform: rotateX(-120deg);
+}
+
+.box-container-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.animate__animated.animate__bounceInDown {
+  --animate-duration: 2.1s;
+}
+
+/* ^--------------Counters section ----------------- */
+
+.counters {
+  background-image: url(../imgs/back2.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.counts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding-block: 70px;
+}
+.count {
+  color: #fff;
+  font-size: 19px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ^----------------- Menu section ------------------- */
+.menu {
+  padding-bottom: 60px;
+}
+.items {
+  display: flex;
+  gap: 15px;
+  padding-inline: 40px;
+  flex-wrap: wrap;
+}
+.item {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 20px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.item-img {
+  padding: 50px;
+  padding-bottom: 20px;
+}
+.item-img img {
+  width: 100%;
+}
+.item p {
+  text-align: center;
+  font-weight: 700;
+}
+.item span {
+  font-weight: 900;
+  font-size: 20px;
+}
+/* ^----------------footer ------------ */
+.footer {
+  background: #535353;
+  padding: 50px 0;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.footer .icons i {
+  margin: 0 10px;
+  color: #f1f1f1;
+  font-size: 17px;
+}
+.footer .icons i:hover,
+.footer span {
+  color: #ff305b;
+}
+
+/* ^ --------global btn styles ---------- */
+.btn {
+  padding-inline: 20px;
+  padding-block: 7px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: var(--transition-fast);
+}
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ^--------------dark mode theme ------------- */
+
+body:has(#mode:checked) .dark{
+  display: none;
+}
+
+body:not(:has(#mode:checked)) .light{
+  display: none;
+}
+
+body:has(#mode:checked){
+  background-color:var(--bg-dark) ;
+  color: #fff;
+}
+
+body:has(#mode:checked) h2{
+  color: #fff;
+}
+
+body:has(#mode:checked) nav,
+body:has(#mode:checked) .card,
+body:has(#mode:checked) .item,
+body:has(#mode:checked) .footer,
+body:has(#mode:checked) .order {
+  background-color: var(--dark-section);
+}
+body:has(#mode:checked) .topping-card{
+  background-color:#272626 ;
+}
+
+body:has(#mode:checked) .section-description,
+body:has(#mode:checked) .item p,
+body:has(#mode:checked) .count span{
+  color: var(--dark-text-secondary);
+}
+body:has(#mode:checked) a,
+body:has(#mode:checked) .light{
+  color: #ff305b;
+}
+
+body:has(#mode:checked) .btn,
+body:has(#mode:checked) .choose-btn{
+  color: #fff;
+}
+

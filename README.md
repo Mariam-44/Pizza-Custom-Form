@@ -15,6 +15,13 @@ A beautiful, web application for ordering custom pizzas with an intuitive user i
 - **Active State Indicators**: Visual feedback for selected items
 - **Accessibility Features**: Proper ARIA labels and semantic HTML
 - **Form Validation**: Required fields for customer information
+- **Dark Mode Toggle**: Switch between light and dark themes for better user preference
+
+### 🎯 **Order Confirmation System**
+- **Interactive Pizza Box Animation**: Hover effect that opens the pizza box
+- **Bouncing Pizza Animation**: Animated pizza drop using Animate.css
+- **Two-Step Process**: Pizza customization → Customer details confirmation
+- **Professional Order Flow**: Dedicated confirmation page for better UX
 
 ### 🎯 **Customer Information System**
 - Contact details collection (Name, Email, Phone)
@@ -22,20 +29,34 @@ A beautiful, web application for ordering custom pizzas with an intuitive user i
 - Special delivery instructions textarea
 - Order confirmation workflow
 
+### 🚀 **Statistics Display**
+- **Customer Metrics**: 600+ Happy Customers counter
+- **Order Volume**: 800+ Pizzas Served
+- **Delivery Performance**: 95% On-Time Deliveries
+- **Quality Rating**: 4.9/5 Customer Rating
+
+### 🍕 **Menu Showcase**
+- **8 Pizza Options**: Pre-designed menu items
+- **Pricing Display**: Individual pricing for each menu item
+- **Visual Menu Cards**: Attractive card-based layout
+
 ## 🛠️ Tech Stack
 
 - **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern styling with Flexbox , animation
+- **CSS3**: Modern styling with Flexbox, animations, and dark mode
 - **Font Awesome**: Icon library for navigation and UI elements
 - **Google Fonts**: Custom typography (Gloock, Nothing You Could Do)
+- **Animate.css**: Professional animations for enhanced user experience
 
 ## 📁 Project Structure
 
 ```
 Task 4/
-│
-├── index.html                 # Main HTML file
-├── webfonts                   
+│           
+├── html/
+│   └── index.html            # Main page
+│   └── confirm.html          # Order confirmation page
+├── webfonts/                 # Font Awesome webfonts
 ├── CSS/
 │   ├── style.css             # Main stylesheet
 │   └── all.min.css           # Font Awesome icons
@@ -45,6 +66,8 @@ Task 4/
 │   ├── pizza2.png            # Multigrain pizza
 │   ├── pizza3.png            # Stuffed Crust pizza
 │   ├── h4-pizza-3.png        # Gluten-Free pizza
+│   ├── pizza-box.png         # Pizza box front image
+│   ├── pizza-box2.png        # Pizza box base image
 │   ├── pepperoni.png         # Topping icons
 │   ├── mushrooms.png
 │   ├── tomato-sauce.png
@@ -53,7 +76,9 @@ Task 4/
 │   ├── peppers.png
 │   ├── anchovy.png
 │   ├── bacon-strips.png
+│   ├── item1.gif - item8.gif # Animated menu items
 │   ├── h4-start-piz.png      # Header background
+│   ├── back2.png             # Counters section background
 │   └── h4-pizza-3.png        # Header foreground
 └── README.md                 # This file
 ```
@@ -67,6 +92,7 @@ Task 4/
    - Images in the `/imgs/` folder
    - CSS files in the `/CSS/` folder
    - Font Awesome CSS file (`all.min.css`)
+   - Animate.css CDN linked in HTML
 
 ## 🎯 Usage Guide
 
@@ -74,9 +100,15 @@ Task 4/
 1. **Browse Pizza Options**: Scroll through the four crust varieties
 2. **Select Your Base**: Click "Choose" on your preferred crust
 3. **Add Toppings**: Click on topping icons to select/deselect
-4. **Add to Cart**: Click "Add to Cart" when satisfied with selection
-5. **Enter Details**: Fill in contact and delivery information
-6. **Place Order**: Click "Confirm Order" to submit
+4. **Proceed to Confirmation**: Click "Bring me pizza!" to go to confirmation page
+5. **Interactive Box Animation**: Hover over the pizza box to see opening animation
+6. **Enter Details**: Fill in contact and delivery information
+7. **Place Order**: Click "Confirm Order" to submit
+
+### Navigation Features:
+- **Dark Mode**: Toggle between light and dark themes using the moon/sun icon
+- **Smooth Scrolling**: Click navigation links for smooth section transitions
+- **Active Link Highlighting**: Current section highlighted in navigation
 
 ## 🎨 Design Features
 
@@ -86,6 +118,7 @@ Task 4/
 - **Background**: `#f9edde` (Cream)
 - **Content**: `#fff7ed` (Light Cream)
 - **Text**: `#2c2c2c` (Dark Gray)
+- **Dark Mode**: `#121212` (Dark Background), `#1e1e1e` (Dark Sections)
 
 ### Typography
 - **Headers**: Gloock (Google Fonts)
@@ -93,10 +126,13 @@ Task 4/
 - **Body**: System fonts for readability
 
 ### Animations
-- Smooth hover transitions
-- Active state indicators
-- Scroll-triggered navigation highlights
-- Form focus states
+- **Smooth hover transitions** on all interactive elements
+- **Active state indicators** for pizza and topping selections
+- **Scroll-triggered navigation highlights**
+- **Form focus states** with primary color borders
+- **Pizza box opening animation** on hover
+- **Bouncing pizza animation** on confirmation page
+- **Parallax background** for counters section
 
 ## 🔧 Customization Options
 
@@ -128,6 +164,17 @@ Task 4/
 </label>
 ```
 
+### Adding New Menu Items
+```html
+<div class="item">
+  <div class="item-img">
+    <img src="../imgs/new-item.gif" alt="New Menu Item" />
+  </div>
+  <p>Description of the new menu item...</p>
+  <span>$Price</span>
+</div>
+```
+
 ## 🎭 Accessibility Features
 
 - **Semantic HTML**: Proper heading hierarchy and form structure
@@ -147,7 +194,7 @@ Task 4/
 
 ## 👤 Author
 
-**Mariam Kilany**
+**Mariam Kilany**  
 
 ---
 
